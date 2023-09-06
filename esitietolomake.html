@@ -1,0 +1,70 @@
+<DOCTYPE>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title> Esitietolomake </title>
+            <link href="css/styleesitieto.css" rel="stylesheet" type="text/css">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kuvat.html">Kuvat</a></li>
+                    <li><a href="hinnasto.html">Hinnasto</a></li>
+                    <li><a href="ennentuloa.html">Ennen hoitoon tuloa</a></li>
+                    <li><a href="esitietolomake.html">Esitietolomake</a></li>
+                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+                </ul>
+             </nav> 
+        </header>
+        <div class="container">
+            <div class="title">Varauspyyntö- ja esitietolomake</div>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Omistajan nimi</span>
+                        <input type="text" placeholder="Nimi" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Puhelinnumero</span>
+                        <input type="text" placeholder="Puhelinnumero" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Koiran nimi</span>
+                        <input type="text" placeholder="Koiran nimi" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Koiran rotu</span>
+                        <input type="text" placeholder="Koiran rotu" required>
+                    </div>
+                </div>
+                <div class="loma-tyyppi">
+                    <span class="loma-valinta">Hoitotyyppi</span>
+                    <div class="loma">
+                        <label for="">
+                            <input type="radio" id="tayshoito" name="lomatyyppi" value="Täyshoito">
+                            <label for="tayshoito">Täyshoito</label><br>
+                            <input type="radio" id="sporttiloma" name="lomatyyppi" value="Sporttiloma">
+                            <label for="sporttiloma">Sporttiloma</label><br>
+                            <input type="radio" id="paivahoito" name="lomatyyppi" value="Päivähoito">
+                            <label for="paivahoito">Päivähoito</label><br><br>
+                        </label>
+                    </div>
+                </div>
+                <input type="submit" value="Lähetä">
+            </form>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Lemmikkihoitola Toinen Koti</p>
+        </footer>
+    </body>
+    </html>
+    
