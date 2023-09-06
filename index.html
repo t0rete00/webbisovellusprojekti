@@ -2,11 +2,56 @@
 <html lang="en">
 <head>
     <meta charset-"UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
-<body><h1>Moikka!</h1>
-<p>Miten koodaus sujuu?</p>
-<img src="assets/pictures/collie.JPG" alt="colliekuva" class="center">
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#kuvat">Kuvat</a></li>
+                <li><a href="#hinnasto">Hinnasto</a></li>
+                <li><a href="#ennentuloa">Ennen hoitoon tuloa</a></li>
+                <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+            </ul>
+         </nav> 
+    </header>     
+
+    <main>
+        <h1>Tervetuloa hoitolan kotisivuille!</h1>
+        <p>Tähän tulee kaikenlaista esittelytekstiä.</p>
+        <img src="assets/pictures/collie.JPG" alt="colliekuva" class="center">    
+   
+        <section>
+            <h2>Kuvia hoitolasta</h2>
+            <p>Tässä kuvia hoitolan tiloista.</p>
+        </section>
+
+        <section>
+            <h2>Hinnasto</h2>
+            <p>Hinnastosta seuraavaa.</p>
+        </section>
+
+        <section>
+            <h2>Ennen hoitoon tuloa</h2>
+            <p>Huomioithan nämä ennen hoitoon tuloa.</p>
+        </section>
+
+        <section>
+            <h2>Yhteystiedot</h2>
+            <p>Näillä välineillä otat meihin yhteyttä.</p>
+        </section>
+
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Paina tästä nähdäksesi päivämäärän ja ajan.</button>
+        <p id="demo"></p>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Lemmikkihoitola Toinen Koti</p>
+    </footer>
+
 </body>
 </html>
