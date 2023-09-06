@@ -1,5 +1,6 @@
 body, h1, h2, p, ul, li {
     text-align: center;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -24,12 +25,13 @@ nav {
 
 nav ul {
     list-style-type: none;
-    padding: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 nav li {
     display: inline;
-    margin-right: 20px;
 }
 
 nav ul li a {
