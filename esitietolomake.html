@@ -1,70 +1,84 @@
-<DOCTYPE>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title> Esitietolomake </title>
-            <link href="css/styleesitieto.css" rel="stylesheet" type="text/css">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="kuvat.html">Kuvat</a></li>
-                    <li><a href="hinnasto.html">Hinnasto</a></li>
-                    <li><a href="ennentuloa.html">Ennen hoitoon tuloa</a></li>
-                    <li><a href="esitietolomake.html">Esitietolomake</a></li>
-                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-                </ul>
-             </nav> 
-        </header>
-        <div class="container">
-            <div class="title">Varauspyyntö- ja esitietolomake</div>
-            <form action="#">
-                <div class="user-details">
-                    <div class="input-box">
-                        <span class="details">Omistajan nimi</span>
-                        <input type="text" placeholder="Nimi" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Email</span>
-                        <input type="text" placeholder="Email" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Puhelinnumero</span>
-                        <input type="text" placeholder="Puhelinnumero" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Koiran nimi</span>
-                        <input type="text" placeholder="Koiran nimi" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Koiran rotu</span>
-                        <input type="text" placeholder="Koiran rotu" required>
-                    </div>
-                </div>
-                <div class="loma-tyyppi">
-                    <span class="loma-valinta">Hoitotyyppi</span>
-                    <div class="loma">
-                        <label for="">
-                            <input type="radio" id="tayshoito" name="lomatyyppi" value="Täyshoito">
-                            <label for="tayshoito">Täyshoito</label><br>
-                            <input type="radio" id="sporttiloma" name="lomatyyppi" value="Sporttiloma">
-                            <label for="sporttiloma">Sporttiloma</label><br>
-                            <input type="radio" id="paivahoito" name="lomatyyppi" value="Päivähoito">
-                            <label for="paivahoito">Päivähoito</label><br><br>
-                        </label>
-                    </div>
-                </div>
-                <input type="submit" value="Lähetä">
-            </form>
+<html>
+	  <meta charset="UTF-8">
+<head>
+	<title> Contact Form Design </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
+<body>
+
+	<div class="contact-title">
+			<h1>Varaustiedustelu</h1>
+			<h2>Jätä omat ja koirasi tiedot sekä hoitotyypin ja haluamanne hoitoajankohdan. Palaamme asiaan mahdollisimman pian.</h2>
+	</div>
+	
+	<div class="contact-form">
+		<form id="contact-form" method="post" action="contact-form-handler.php">
+            <label for="fname">Etunimi:</label><br>
+		    <input id="fname" name= "fname" type="text" class="form-control" placeholder="Nimesi" required><br><br>
+		    <label for="lname">Sukunimi:</label><br>
+            <input id="lname" name= "lname" type="text" class="form-control" placeholder="Nimesi" required><br><br>
+            <label for="email">Sähköposti:</label><br>
+            <input name="email" type="email" class="form-control" placeholder="Sähköpostiosoitteesi" required><br><br>
+            <label for="number">Puhelinnumero:</label><br>
+            <input name="number" type="text" class="form-control" placeholder="Puhelinnumerosi" required><br><br>
+            <label for="dogname">Koirani nimi:</label><br>
+            <input name="dogname" type="text" class="form-control" placeholder="Koiran nimi" required><br><br>
+            <label for="dogbreed">Koiran rotu:</label><br>
+            <input name="dogbreed" type="text" class="form-control" placeholder="Koiran rotu" required><br><br>
+            <label for="dogage">Koiran ikä:</label><br>
+            <input name="dogage" type="number" class="form-control" placeholder="Koiran ikä" required><br><br>
+
+
+    <div class="vacation-type">
+        <span class="vacation-choose">Hoitotyyppi:</span>
+            <div class="vacation">
+                <label for="">
+                    <input type="radio" id="fullcare" name="vacation-type" value="Täyshoito">
+                    <label for="fullcare">Täyshoito</label><br>
+                    <input type="radio" id="sportcare" name="vacation-type" value="Sporttiloma">
+                    <label for="sportcare">Sporttiloma</label><br>
+                    <input type="radio" id="paivahoito" name="vacation-type" value="Päivähoito">
+                    <label for="daycare">Päivähoito</label><br><br>
+                </label>
+            </div>
+    </div> 
+    <div class="date-type"
+        <span class="date-choose">Hoitoajankohta:</span><br>
+            <div class="date">
+                <label for="date">
+                    <label for="checkin">Tulopäivä</label><br>
+                    <input type="date" id="date"><br>
+                    <label for="checkout">Lähtöpäivä</label><br>
+                    <input type="date" id="date"><br><br>
+                </label>
+            </div>
         </div>
-
-        <footer>
-            <p>&copy; 2023 Lemmikkihoitola Toinen Koti</p>
-        </footer>
-    </body>
-    </html>
     
+    <div class="extra-add">
+        <span class="extra-choose">Lisäpalvelut</span>
+            <div class="extras">
+                <input type="checkbox" id="extra1" name="extra1" value="Food">
+                <label for="extra1">Kuivaruoka Royal Canin (2 €/pv)</label><br>
+                <input type="checkbox" id="extra2" name="extra2" value="Brush">
+                <label for="extra2">Kevyt harjaus (5 €, oma harja)</label><br>
+                <input type="checkbox" id="extra3" name="extra3" value="Transport">
+                <label for="extra3">Kuljetuspalvelu (0,80 €/km, 70 km säteellä)</label><br>
+                <input type="checkbox" id="extra4" name="extra4" value="Nailcut">
+                <label for="extra4">Kynsien leikkaus 15 €</label><br>
+                <input type="checkbox" id="extra5" name="extra5" value="Walk">
+                <label for="extra5">Lisälenkitys 20 € / 30 min</label><br>
+                <input type="checkbox" id="extra6" name="extra6" value="Wash">
+                <label for="extra6">Koiran pesu 20 €</label><br><br>
+            </div>
+    </div>
+    <div class="message">
+        <span class="message-more">Lisätietoja</span>
+            <div class="messages">
+                <textarea name="message" class="form-control" placeholder="Viestisi" row="4" required></textarea><br><br>
+		        <input type="submit" class="form-control submit" value="LÄHETÄ VIESTI">
+                <input type="reset" class="form-control reset" value="TYHJENNÄ KENTTÄ">
+            </div>
+    </div>
+</body>
+</html>

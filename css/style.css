@@ -71,6 +71,11 @@ img{
     width: 50%;
 }
 
-.container{
-    
+#btn{
+    background-color: white;
+    color: black;
+}
+.active {
+    background-color: green;
+    color: white;
 }
