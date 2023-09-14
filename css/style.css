@@ -3,23 +3,25 @@ body, h1, h2, p, ul, li {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    font-family:'Poppins', font-size: 22px;
 }
 
 /* Set the black background and white text */
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    background-color: #ffcf00;
+    color: black;
+    font-family: 'Poppins';
 }
 
 /* Style the header and navigation */
 header {
+    background-color: #010909;
     text-align: center;
     padding: 20px;
 }
 
 nav {
-    background-color: #333;
+    background-color: #010909;
     text-align: center;
 }
 
@@ -36,7 +38,7 @@ nav li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #ffcf00;
 }
 
 /* Style the main content sections */
@@ -51,7 +53,7 @@ section {
 /* Style the footer */
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: #010909;
     padding: 10px 0;
 }
 
@@ -72,10 +74,103 @@ img{
 }
 
 #btn{
-    background-color: white;
-    color: black;
-}
-.active {
-    background-color: green;
+    background-color: #010909;
     color: white;
+}
+.contacting {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.container{
+    width: 45%;
+    height: 2vh;
+    background: #ffcf00;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.btn{
+    padding: 2px 30px;
+    background: #0f0f0f;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #ffcf00;
+}
+.popup h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #ffcf00;
+    color: #010909;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.carousel-item {
+    background-color: #010909;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 300px; /* Set a minimum height for the carousel items */
+}
+
+.centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    margin: 50px 200px;
+}
+/* Optional: Add some width constraints for larger screens */
+@media (min-width: 768px) {
+    .centered-form {
+        max-width: 300px; /* Adjust the max-width as needed */
+        margin: 20px auto; /* Center horizontally */
+    }
 }

@@ -1,10 +1,32 @@
-<DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset-"UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <title>Image Carousel</title>
+  <!-- Add Bootstrap CSS and JS files -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom CSS -->
+  <style>
+    #pictures {
+        padding: 10px;
+        height: auto;
+        width: auto;
+    }
+    .carousel-inner {
+        text-align: center;
+    }
+    .carousel-item {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 750px; /* Adjust this value as needed */
+    }
+  </style>
 </head>
 <body>
     <header>
@@ -19,14 +41,68 @@
             </ul>
          </nav> 
     </header>
-
-    <main>
-        <h1>Kuvia</h1>
-        <p>Kuvia hoitolan tiloista</p>
-    </main>
-
+    <section id="pictures">
+        <div class="container">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" id="carousel-indicators">
+              <!-- Indicator list will be generated dynamically -->
+            </ol>
+            <div class="carousel-inner" id="carousel-inner">
+              <!-- Carousel items will be generated dynamically -->
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    
+      <script>
+        // Array of image URLs
+        const imageUrls = [
+          "assets/pictures/carousel1.jpg",
+          "assets/pictures/carousel2.jpg",
+          "assets/pictures/carousel3.jpg",
+          "assets/pictures/carousel4.jpg",
+          "assets/pictures/carousel5.jpg",
+          "assets/pictures/carousel6.jpg",
+          "assets/pictures/carousel7.jpg",
+          "assets/pictures/carousel8.jpg",
+          "assets/pictures/carousel9.jpg",
+          "assets/pictures/carousel10.jpg",
+          // Add more image URLs as needed
+        ];
+    
+        // Function to create carousel items and indicators dynamically
+        function createCarouselItems() {
+          const carouselInner = document.getElementById("carousel-inner");
+          const carouselIndicators = document.getElementById("carousel-indicators");
+    
+          imageUrls.forEach((imageUrl, index) => {
+            const carouselItem = document.createElement("div");
+            carouselItem.className = "carousel-item" + (index === 0 ? " active" : "");
+            carouselItem.style.backgroundImage = `url(${imageUrl})`;
+    
+            const indicator = document.createElement("li");
+            indicator.setAttribute("data-target", "#myCarousel");
+            indicator.setAttribute("data-slide-to", index);
+            indicator.className = index === 0 ? "active" : "";
+    
+            carouselInner.appendChild(carouselItem);
+            carouselIndicators.appendChild(indicator);
+          });
+        }
+    
+        // Call the function to create carousel items dynamically
+        createCarouselItems();
+      </script>
     <footer>
-        <p>&copy; 2023 Lemmikkihoitola Toinen Koti</p>
+        <img src="assets/pictures/toinenkoti_lemmikkihoitola.png">
     </footer>
 </body>
 </html>
