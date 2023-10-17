@@ -50,6 +50,13 @@ section {
     margin-bottom: 20px;
 }
 
+th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:hover {background-color: #e79447;}
+
 /* Style the footer */
 footer {
     text-align: center;
@@ -89,12 +96,7 @@ button {
     cursor: pointer;
 }
 .container{
-    width: 45%;
-    height: 2vh;
-    background: #ffcf00;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+    text-align: center;
 }
 .btn{
     padding: 2px 30px;
@@ -151,11 +153,26 @@ button {
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
+
+#pictures {
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+.carousel-inner {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+}
+
 .carousel-item {
     background-color: #010909;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     min-height: 300px; /* Set a minimum height for the carousel items */
 }
 
@@ -164,13 +181,58 @@ button {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     margin: 50px 200px;
 }
-/* Optional: Add some width constraints for larger screens */
-@media (min-width: 768px) {
-    .centered-form {
-        max-width: 300px; /* Adjust the max-width as needed */
-        margin: 20px auto; /* Center horizontally */
-    }
+
+.contact-form {
+    background-color: #ffcf00;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px; /* Limit maximum width */
+    text-align: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+  
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 }

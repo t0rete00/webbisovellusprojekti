@@ -11,26 +11,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Custom CSS -->
-  <style>
-    #pictures {
-        padding: 10px;
-        height: auto;
-        width: auto;
-    }
-    .carousel-inner {
-    position: responsive;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 100%;
-    }
-    .carousel-item {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 750px; /* Adjust this value as needed */
-    }
-  </style>
 </head>
 <body>
     <header>
@@ -39,9 +19,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="kuvat.html">Kuvat</a></li>
                 <li><a href="hinnasto.html">Hinnasto</a></li>
-                <li><a href="ennentuloa.html">Ennen hoitoon tuloa</a></li>
                 <li><a href="esitietolomake.html">Esitietolomake</a></li>
-                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
             </ul>
          </nav> 
     </header>
@@ -49,10 +27,8 @@
         <div class="picturecarousel">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators" id="carousel-indicators">
-              <!-- Indicator list will be generated dynamically -->
             </ol>
             <div class="carousel-inner" id="carousel-inner">
-              <!-- Carousel items will be generated dynamically -->
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -67,22 +43,23 @@
       </section>
     
       <script>
-        // Array of image URLs
         const imageUrls = [
-          "assets/pictures/carousel1.jpg",
-          "assets/pictures/carousel2.jpg",
-          "assets/pictures/carousel3.jpg",
-          "assets/pictures/carousel4.jpg",
-          "assets/pictures/carousel5.jpg",
-          "assets/pictures/carousel6.jpg",
-          "assets/pictures/carousel7.jpg",
-          "assets/pictures/carousel8.jpg",
-          "assets/pictures/carousel9.jpg",
-          "assets/pictures/carousel10.jpg",
-          // Add more image URLs as needed
+          "assets/dxpictures/pic2.jpg",
+          "assets/dxpictures/pic3.jpg",
+          "assets/dxpictures/pic4.jpg",
+          "assets/dxpictures/pic5.jpg",
+          "assets/dxpictures/pic6.jpg",
+          "assets/dxpictures/pic7.jpg",
+          "assets/dxpictures/pic8.jpg",
+          "assets/dxpictures/pic9.jpg",
+          "assets/dxpictures/pic10.jpg",
+          "assets/dxpictures/pic11.jpg",
+          "assets/dxpictures/pic12.jpg",
+          "assets/dxpictures/pic13.jpg",
+          "assets/dxpictures/pic14.jpg",
+          "assets/dxpictures/pic15.jpg",
         ];
     
-        // Function to create carousel items and indicators dynamically
         function createCarouselItems() {
           const carouselInner = document.getElementById("carousel-inner");
           const carouselIndicators = document.getElementById("carousel-indicators");
@@ -101,8 +78,6 @@
             carouselIndicators.appendChild(indicator);
           });
         }
-    
-        // Call the function to create carousel items dynamically
         createCarouselItems();
       </script>
     <footer>
