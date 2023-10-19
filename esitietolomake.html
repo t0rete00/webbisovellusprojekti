@@ -1,4 +1,4 @@
-<DOCTYPE>
+<!DOCTYPE>
 <html lang="en">
     <head>
         <meta charset-"UTF-8">
@@ -19,8 +19,8 @@
 <body>
     <div class="centered-form">
         <div class="contact-title">
-            <h1>Varaustiedustelu</h1>
-            <p>Jätä omat ja koirasi tiedot sekä hoitotyypin ja haluamanne hoitoajankohdan. Palaamme asiaan mahdollisimman pian.</p>
+            <h1>Esitietolomake</h1>
+            <p>Jätä omat ja koirasi tiedot sekä hoitotyypin ja haluamasi hoitoajankohdan. Palaamme asiaan mahdollisimman pian.</p>
         </div>
         <section id="contacting">
             <div class="contact-form">
@@ -33,12 +33,14 @@
                     <input name="email" type="email" class="form-control" placeholder="Sähköpostiosoitteesi" required><br><br>
                     <label for="number">Puhelinnumero:</label><br>
                     <input name="number" type="text" class="form-control" placeholder="Puhelinnumerosi" required><br><br>
-                    <label for="dogname">Koirani nimi:</label><br>
+                    <label for="dogname">Koiran nimi:</label><br>
                     <input name="dogname" type="text" class="form-control" placeholder="Koiran nimi" required><br><br>
                     <label for="dogbreed">Koiran rotu:</label><br>
                     <input name="dogbreed" type="text" class="form-control" placeholder="Koiran rotu" required><br><br>
-                    <label for="dogage">Koiran ikä:</label><br>
-                    <input name="dogage" type="number" class="form-control" placeholder="Koiran ikä" required><br><br>
+                    <label for="dogage">Koiran ikä (v):</label><br>
+                    <input name="dogage" type="number" class="form-control" placeholder="Koiran ikä" required min="0"><br><br>
+                    <label for="dogage">Koiran ikä (kk):</label><br>
+                    <input name="dogage" type="number" class="form-control" placeholder="Koiran ikä" required min="1"><br><br>
 
 
             <div class="vacation-type">
@@ -63,16 +65,10 @@
                         <label for="extra2">Kevyt harjaus (5 €, oma harja)</label><br>
                         <input type="checkbox" id="extra3" name="extra3" value="Transport">
                         <label for="extra3">Kuljetuspalvelu (0,80 €/km, 70 km säteellä)</label><br>
-                        <input type="checkbox" id="extra4" name="extra4" value="Nailcut">
-                        <label for="extra4">Kynsien leikkaus 15 €</label><br>
-                        <input type="checkbox" id="extra5" name="extra5" value="Walk">
-                        <label for="extra5">Lisälenkitys 20 € / 30 min</label><br>
-                        <input type="checkbox" id="extra6" name="extra6" value="Wash">
-                        <label for="extra6">Koiran pesu 20 €</label><br><br>
                     </div>
             </div>
             <div class="message">
-                <span class="message-more">Lisätietoja</span>
+                <span class="message-more">Lisätietoja:</span>
                     <div class="messages">
                         <textarea name="message" class="form-control" placeholder="Viestisi" row="4" required></textarea><br><br>
                     </div>

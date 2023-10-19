@@ -1,4 +1,4 @@
-<DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset-"UTF-8">
@@ -22,15 +22,19 @@
     <main>
         <div class="tervetuloa">
             <h1>Tervetuloa hoitolan sivuille</h1>
-            <video width="400" height="240" autoplay muted style="object-fit: cover;">
-                <source src="assets/video/video.mp4" type="video/mp4">
-            </video>
         </div>
     </main>
 
+    <img id="imgDog" class="api-img">
+
+    <script>
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response => response.json())
+        .then(data => imgDog.src = data.message);
+    </script>
+
     <footer>
         <img src="assets/pictures/toinenkoti_lemmikkihoitola.png">
-        <img src="assets/dxpictures/pic10.jpg">
     </footer>
 
 </body>
